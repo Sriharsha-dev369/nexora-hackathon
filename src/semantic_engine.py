@@ -9,10 +9,13 @@ from src.parsing import Requirement, ResumeSections
 from src.weights import weight
 
 SIMILARITY_MATCH_THRESHOLD = 0.45
-# Raw cosine similarity from this model clusters roughly in [0.15, 0.75] for
-# related-vs-unrelated tech text; rescale that range to 0-100 for visible spread.
-RAW_SIMILARITY_FLOOR = 0.15
-RAW_SIMILARITY_CEILING = 0.75
+# Empirically measured against the real 18-resume hackathon batch: raw cosine
+# similarity between a short JD requirement phrase and a resume's Skills+
+# Experience text clusters in roughly [p5, p95] = [0.0, 0.25] (median 0.15),
+# far tighter than sentence-vs-sentence similarity. Rescale that observed
+# range to 0-100 for visible spread; see README.md's "Scoring formula" section.
+RAW_SIMILARITY_FLOOR = 0.02
+RAW_SIMILARITY_CEILING = 0.26
 
 
 @dataclass(frozen=True)
