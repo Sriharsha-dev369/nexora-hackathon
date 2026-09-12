@@ -1,6 +1,8 @@
 # Sample data provenance
 
-- **`jd.pdf`** — self-authored. No official `Sample_JD.pdf` was found in the provided resume drive folder, so this JD (Junior Full Stack Developer Intern, TechNova Solutions) was written to match the role named in the hackathon problem statement.
-- **`resumes/`** — 18 resumes selected from a shared "Dummy Resumes" bank (not the hackathon's official curated batch, which wasn't available). Selected as 14 dev-relevant (App Dev + AI Dev, for strong/partial-fit variety) + 4 clearly unrelated (Cyber Security, Business Analyst, Content Creator, Cloud Engineer, for weak-fit variety) — deliberately mirroring the spread the real problem statement asks for.
+No official `Sample_JD.pdf` or curated 18-resume batch was ever provided for this event — the only data source given was a shared Google Drive folder ("Dummy Resumes") spanning many unrelated roles (App Dev, AI Dev, Cyber Security, Content Creation, Blockchain, Business Analyst, Cloud Engineer, etc.), with no JD file at all. This folder's contents **are the real submission/demo data**, not placeholder test data.
 
-**If the official `Sample_JD.pdf` and 18-resume batch become available, replace the contents of this folder with those** — the app and scoring were tuned against this stand-in data, so a quick re-check of score spread after swapping is worth doing.
+- **`jd.pdf`** — self-authored, invented to match only the role name the problem statement gave ("Junior Full Stack Developer Intern," TechNova Solutions). The specific Required/Preferred skill list (JavaScript, React, Node.js, REST API design, SQL, Git as required; TypeScript, Docker, MongoDB, AWS as preferred) is an authored judgment call, not sourced from anything official — be ready to defend these choices to a judge.
+- **`resumes/`** — 18 resumes selected from the Dummy Resumes bank: 14 dev-relevant (App Dev + AI Dev, for strong/partial-fit variety) + 4 deliberately unrelated (Cyber Security, Business Analyst, Content Creator, Cloud Engineer, for weak-fit variety) — mirroring the spread the problem statement asks for ("some strong matches, some partial/medium, some weak").
+
+The scoring formula's tunable constants (semantic rescale range, penalty exponent, skill weights) were calibrated against this exact batch — see the README's "Scoring formula" section.
